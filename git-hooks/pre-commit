@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+# Any copyright is dedicated to the Public Domain.
+# For more information, please refer to https://unlicense.org.
+#
+import sys
+import subprocess
+
+try:
+    CMD = ['git', 'grep', '-ni', r'"ID": "z', '--', '.env-cmdrc*']
+    RESULT = subprocess.run(CMD, capture_output=True, encoding='utf-8')
+    if RESULT.returncode == 0:
+        file, line = RESULT.stdout.split(":")[:2]
+        print(f'Mainframe ID found in {file} at line {line}!', file=sys.stderr)
+        print('Remove the ID and run "git commit" again.', file=sys.stderr)
+        sys.exit(1)
+
+except (subprocess.CalledProcessError, FileNotFoundError) as exc:
+    print(exc, file=sys.stderr)
+    sys.exit(2)

@@ -1,0 +1,49 @@
+{
+  "name": "zowe-scripts",
+  "version": "1.0.0",
+  "description": "Automated Zowe CLI tasks for Open Mainframe's COBOL training course <github.com/openmainframeproject/cobol-programming-course>",
+  "scripts": {
+    "addamt": "env-cmd -xe global,addamt zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "allocnew": "env-cmd -xe global,allocnew zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0001j": "env-cmd -xe global,cbl0001j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0002j": "env-cmd -xe global,cbl0002j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0003j": "env-cmd -xe global,cbl0003j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0004j": "env-cmd -xe global,cbl0004j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0005j": "env-cmd -xe global,cbl0005j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0006j": "env-cmd -xe global,cbl0006j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0007j": "env-cmd -xe global,cbl0007j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0008j": "env-cmd -xe global,cbl0008j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0009j": "env-cmd -xe global,cbl0009j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0010j": "env-cmd -xe global,cbl0010j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0011j": "env-cmd -xe global,cbl0011j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0012j": "env-cmd -xe global,cbl0012j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbl0033j": "env-cmd -xe global,cbl0033j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cbldb21j": "env-cmd -xe global,cbldb21j zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "cobrun": "env-cmd -xe global,cobrun zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "defvsam": "env-cmd -xe global,defvsam zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "hello": "env-cmd -xe global,hello zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "igycall": "env-cmd -xe global,igycall zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "payrol00": "env-cmd -xe global,payrol00 zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "payrol0x": "env-cmd -xe global,payrol0x zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "srchbinj": "env-cmd -xe global,srchbinj zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "srchserj": "env-cmd -xe global,srchserj zowe jobs submit ds '$ID.jcl($JOB)' -d .",
+    "ls:cbl": "env-cmd -xe global zowe files list am '$ID.cbl'",
+    "ls:jcl": "env-cmd -xe global zowe files list am '$ID.jcl'",
+    "fetch:cbl": "env-cmd -xe global zowe files download am '$ID.cbl' -e .cbl",
+    "fetch:jcl": "env-cmd -xe global zowe files download am '$ID.jcl' -e .jcl",
+    "clg": "zowe jobs submit ds \"$ID.JCL($DS)\" -d .",
+    "clg:json": "zowe jobs submit ds \"$ID.JCL($DS)\" -d . --rfj",
+    "status": "zowe zosmf check status"
+  },
+  "keywords": [
+    "z/OS",
+    "zosmf",
+    "zowe-cli",
+    "COBOL"
+  ],
+  "author": "Robert Di Pardo <github.com/rdipardo>",
+  "license": "Unlicense",
+  "dependencies": {
+    "env-cmd": "^10.1.0"
+  }
+}

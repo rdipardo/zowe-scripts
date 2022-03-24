@@ -1,0 +1,30 @@
+Configuration
+-------------
+# set the global.ID property in '.env-cmdrc.json' to the mainframe ID obtained at registration:
+# https://www-40.ibm.com/events/wwe/ast/mtm/cobolvscode.nsf/enrollall?openform
+
+  "global": {
+    "ID": "Zxxxxx"
+  }
+
+Usage (all platforms)
+---------------------
+# verify mainframe access
+npm run status
+
+# list all JCL data sets on the server
+npm run ls:jcl
+
+# make local copies of COBOL source files
+npm run fetch:cbl
+
+# compile and run the "HELLO" program
+npm run hello
+
+Linux, macOS *only*
+-------------------
+# compile and run the "PAYROL00" program
+ID=Zxxxxx DS=PAYROL00 npm run clg
+
+# compile and run the "PAYROL0X" program, emitting the output as JSON
+ID=Zxxxxx DS=PAYROL0X npm run clg:json
